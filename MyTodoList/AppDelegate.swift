@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let settings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+        UIApplication.shared.registerUserNotificationSettings(settings)
+        UIApplication.shared.registerForRemoteNotifications()
+        
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        
         return true
     }
 
@@ -41,6 +48,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, didRegister
+        notificationSettings: UIUserNotificationSettings) {
+        print("tipos de notificaciones aceptadas \(notificationSettings.types)")
+    }
+    
+    func application(_ application: UIApplication, didReceive
+        notification: UILocalNotification) {
+        if let message = notification.alertBody {
+            let alert = UIAlertView(title: "Recordatorio", message: message, delegate: nil, cancelButtonTitle: "Ok")
+            alert.show()
+        }
+    }
 
 }
 

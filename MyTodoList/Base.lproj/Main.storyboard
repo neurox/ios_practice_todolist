@@ -90,19 +90,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UoP-Ib-poA">
-                                <rect key="frame" x="0.0" y="64" width="375" height="333.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UoP-Ib-poA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oCx-eP-wNf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarea:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQb-LB-ZeK">
+                                                <rect key="frame" x="0.0" y="0.0" width="183.5" height="150"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sin tarea" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHo-k6-JVl">
+                                                <rect key="frame" x="191.5" y="0.0" width="183.5" height="150"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qP5-9L-ON2">
+                                        <rect key="frame" x="0.0" y="150" width="375" height="150"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvh-Gd-hxu">
+                                                <rect key="frame" x="0.0" y="0.0" width="183.5" height="150"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sin fecha" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D8-rI-3jy">
+                                                <rect key="frame" x="191.5" y="0.0" width="183.5" height="150"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                             </stackView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tiy-hT-dM8">
+                                <rect key="frame" x="0.0" y="364" width="375" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="vNI-2J-Ha3"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="549993699.19667399">
+                                    <!--2018-06-06 16:01:39 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dateSelected:" destination="jI1-H4-euf" eventType="valueChanged" id="fPT-l8-pLr"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="tiy-hT-dM8" firstAttribute="trailing" secondItem="WIc-gz-2ny" secondAttribute="trailing" id="7nM-Yt-LDA"/>
                             <constraint firstItem="WIc-gz-2ny" firstAttribute="trailing" secondItem="UoP-Ib-poA" secondAttribute="trailing" id="Dbm-Ti-WNA"/>
                             <constraint firstItem="UoP-Ib-poA" firstAttribute="leading" secondItem="WIc-gz-2ny" secondAttribute="leading" id="Mqe-w0-bZn"/>
                             <constraint firstItem="UoP-Ib-poA" firstAttribute="height" secondItem="rOY-l8-0P4" secondAttribute="height" multiplier="0.5" id="Pid-R4-AzZ"/>
+                            <constraint firstItem="tiy-hT-dM8" firstAttribute="leading" secondItem="WIc-gz-2ny" secondAttribute="leading" id="RBA-dc-ooA"/>
+                            <constraint firstItem="WIc-gz-2ny" firstAttribute="bottom" secondItem="tiy-hT-dM8" secondAttribute="bottom" constant="20" id="WBh-7j-kJB"/>
+                            <constraint firstItem="tiy-hT-dM8" firstAttribute="top" secondItem="UoP-Ib-poA" secondAttribute="bottom" id="dpZ-zY-scs"/>
                             <constraint firstItem="UoP-Ib-poA" firstAttribute="top" secondItem="WIc-gz-2ny" secondAttribute="top" id="jsb-Vo-BHs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WIc-gz-2ny"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2mz-ja-WXD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="SwY-xe-lh8">
+                            <connections>
+                                <action selector="addNotification:" destination="jI1-H4-euf" id="Eqh-VC-ZjF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateLabel" destination="4D8-rI-3jy" id="i30-ir-8hg"/>
+                        <outlet property="descriptionLabel" destination="bHo-k6-JVl" id="2ng-AE-yDf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODJ-1g-BFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

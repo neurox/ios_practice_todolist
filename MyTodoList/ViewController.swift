@@ -12,6 +12,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
     
     @IBOutlet weak var itemTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    
+    
+    
     let todoList = TodoList()
     
     var selectedItem: String?
