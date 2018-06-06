@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -88,7 +89,18 @@
                     <view key="view" contentMode="scaleToFill" id="rOY-l8-0P4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UoP-Ib-poA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="333.5"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WIc-gz-2ny" firstAttribute="trailing" secondItem="UoP-Ib-poA" secondAttribute="trailing" id="Dbm-Ti-WNA"/>
+                            <constraint firstItem="UoP-Ib-poA" firstAttribute="leading" secondItem="WIc-gz-2ny" secondAttribute="leading" id="Mqe-w0-bZn"/>
+                            <constraint firstItem="UoP-Ib-poA" firstAttribute="height" secondItem="rOY-l8-0P4" secondAttribute="height" multiplier="0.5" id="Pid-R4-AzZ"/>
+                            <constraint firstItem="UoP-Ib-poA" firstAttribute="top" secondItem="WIc-gz-2ny" secondAttribute="top" id="jsb-Vo-BHs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WIc-gz-2ny"/>
                     </view>
                 </viewController>
