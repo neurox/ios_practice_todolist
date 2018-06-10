@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +22,21 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("Item: \(String(describing: item))")
         descriptionLabel.text? = self.item!
+        
+        // Hide and show date picker
+        let tapGestureRecognizer = UITapGestureRecognizer()
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        tapGestureRecognizer.numberOfTouchesRequired = 1
+        tapGestureRecognizer.addTarget(self, action: #selector(toggleDatePicker))
+        
+        self.dateLabel.addGestureRecognizer(tapGestureRecognizer)
+        self.dateLabel.isUserInteractionEnabled = true
     }
-
+    
+    @objc func toggleDatePicker() {
+        self.datePicker.isHidden = !self.datePicker.isHidden
+    }
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -74,5 +88,11 @@ class DetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func addImage(_ sender: UIBarButtonItem) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
 
 }

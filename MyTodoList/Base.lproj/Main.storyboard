@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pBv-5s-WOR">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +15,7 @@
             <objects>
                 <navigationController id="pBv-5s-WOR" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="14Q-Yb-FFU">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -32,18 +31,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyTodoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltS-vT-QsP">
-                                <rect key="frame" x="303" y="70" width="56" height="30"/>
+                                <rect key="frame" x="248" y="70" width="56" height="30"/>
                                 <state key="normal" title="Guardar"/>
                                 <connections>
                                     <action selector="addButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDy-xO-T7f"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribir Tarea" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKd-xC-Glt">
-                                <rect key="frame" x="16" y="70" width="279" height="30"/>
+                                <rect key="frame" x="16" y="70" width="224" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet"/>
@@ -52,7 +51,7 @@
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ph3-Z3-b1p">
-                                <rect key="frame" x="16" y="108" width="343" height="539"/>
+                                <rect key="frame" x="16" y="108" width="288" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -87,23 +86,23 @@
             <objects>
                 <viewController id="jI1-H4-euf" customClass="DetailViewController" customModule="MyTodoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rOY-l8-0P4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UoP-Ib-poA">
-                                <rect key="frame" x="0.0" y="64" width="375" height="300"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UoP-Ib-poA">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oCx-eP-wNf">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarea:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQb-LB-ZeK">
-                                                <rect key="frame" x="0.0" y="0.0" width="183.5" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="156" height="112"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sin tarea" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHo-k6-JVl">
-                                                <rect key="frame" x="191.5" y="0.0" width="183.5" height="150"/>
+                                                <rect key="frame" x="164" y="0.0" width="156" height="112"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -111,47 +110,62 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qP5-9L-ON2">
-                                        <rect key="frame" x="0.0" y="150" width="375" height="150"/>
+                                        <rect key="frame" x="0.0" y="120" width="320" height="332"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvh-Gd-hxu">
-                                                <rect key="frame" x="0.0" y="0.0" width="183.5" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="156" height="332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sin fecha" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D8-rI-3jy">
-                                                <rect key="frame" x="191.5" y="0.0" width="183.5" height="150"/>
+                                                <rect key="frame" x="164" y="0.0" width="156" height="332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <datePicker hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tiy-hT-dM8">
+                                        <rect key="frame" x="0.0" y="456" width="320" height="244"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="244" id="hiE-FS-7kG"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="549993699.19667399">
+                                            <!--2018-06-06 16:01:39 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="dateSelected:" destination="jI1-H4-euf" eventType="valueChanged" id="fPT-l8-pLr"/>
+                                        </connections>
+                                    </datePicker>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Nv-vN-AIj">
+                                        <rect key="frame" x="0.0" y="460" width="320" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="UIr-QL-alP"/>
+                                        </constraints>
+                                        <items>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="Hn7-0d-ntl"/>
+                                            <barButtonItem systemItem="camera" id="c8G-iI-Mwm">
+                                                <connections>
+                                                    <action selector="addImage:" destination="jI1-H4-euf" id="aSe-qB-Den"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
                                 </subviews>
-                            </stackView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tiy-hT-dM8">
-                                <rect key="frame" x="0.0" y="364" width="375" height="216"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="vNI-2J-Ha3"/>
+                                    <constraint firstItem="0Nv-vN-AIj" firstAttribute="leading" secondItem="UoP-Ib-poA" secondAttribute="leading" id="b4z-NQ-R5x"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Nv-vN-AIj" secondAttribute="bottom" id="cS9-L2-4HB"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Nv-vN-AIj" secondAttribute="trailing" id="fXu-2O-fBv"/>
                                 </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="549993699.19667399">
-                                    <!--2018-06-06 16:01:39 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="dateSelected:" destination="jI1-H4-euf" eventType="valueChanged" id="fPT-l8-pLr"/>
-                                </connections>
-                            </datePicker>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tiy-hT-dM8" firstAttribute="trailing" secondItem="WIc-gz-2ny" secondAttribute="trailing" id="7nM-Yt-LDA"/>
-                            <constraint firstItem="WIc-gz-2ny" firstAttribute="trailing" secondItem="UoP-Ib-poA" secondAttribute="trailing" id="Dbm-Ti-WNA"/>
-                            <constraint firstItem="UoP-Ib-poA" firstAttribute="leading" secondItem="WIc-gz-2ny" secondAttribute="leading" id="Mqe-w0-bZn"/>
-                            <constraint firstItem="UoP-Ib-poA" firstAttribute="height" secondItem="rOY-l8-0P4" secondAttribute="height" multiplier="0.5" id="Pid-R4-AzZ"/>
-                            <constraint firstItem="tiy-hT-dM8" firstAttribute="leading" secondItem="WIc-gz-2ny" secondAttribute="leading" id="RBA-dc-ooA"/>
-                            <constraint firstItem="WIc-gz-2ny" firstAttribute="bottom" secondItem="tiy-hT-dM8" secondAttribute="bottom" constant="20" id="WBh-7j-kJB"/>
-                            <constraint firstItem="tiy-hT-dM8" firstAttribute="top" secondItem="UoP-Ib-poA" secondAttribute="bottom" id="dpZ-zY-scs"/>
-                            <constraint firstItem="UoP-Ib-poA" firstAttribute="top" secondItem="WIc-gz-2ny" secondAttribute="top" id="jsb-Vo-BHs"/>
+                            <constraint firstItem="UoP-Ib-poA" firstAttribute="top" secondItem="WIc-gz-2ny" secondAttribute="top" id="9GI-fa-Dwu"/>
+                            <constraint firstItem="UoP-Ib-poA" firstAttribute="leading" secondItem="WIc-gz-2ny" secondAttribute="leading" id="CsK-It-Th2"/>
+                            <constraint firstAttribute="bottom" secondItem="UoP-Ib-poA" secondAttribute="bottom" id="J9Z-Nh-zke"/>
+                            <constraint firstItem="WIc-gz-2ny" firstAttribute="trailing" secondItem="UoP-Ib-poA" secondAttribute="trailing" id="iHE-zD-XbG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WIc-gz-2ny"/>
                     </view>
@@ -164,6 +178,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dateLabel" destination="4D8-rI-3jy" id="i30-ir-8hg"/>
+                        <outlet property="datePicker" destination="tiy-hT-dM8" id="SFN-FA-xt9"/>
                         <outlet property="descriptionLabel" destination="bHo-k6-JVl" id="2ng-AE-yDf"/>
                     </connections>
                 </viewController>
